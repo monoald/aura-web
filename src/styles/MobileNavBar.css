@@ -4,8 +4,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
-  background-color: var(--header-background);
+  z-index: 3;
+  background-color: var(--background);
 }
 
 .Mobile-nav-bar .close-nav-bar {
