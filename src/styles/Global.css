@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 62.5%;
+}
+
+:root {
+  --header-background: #06070c;
+  --header-font-color: rgba(245, 245, 247, 0.8);
+  --header-font-color-hover: rgba(245, 245, 247, 1);
+}
