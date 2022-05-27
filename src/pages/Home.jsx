@@ -72,6 +72,14 @@ const Home = () => {
           </figure>
         </div>
       </section>
+
+      <section className='cta'>
+        <div className='cta__text'>
+          <h2>Search the apartment of your dreams</h2>
+        </div>
+
+        <button className='cta__button'>Find it now</button>
+      </section>
     </div>
   );
 };
