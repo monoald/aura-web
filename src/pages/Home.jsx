@@ -1,6 +1,9 @@
 import plan1 from '@images/plan1.png';
 import plan2 from '@images/plan2.png';
 import plan3 from '@images/plan3.png';
+import monkeyBankLogo from '@images/monkeybank.png';
+import bankKnowhere from '@images/bankknowhere.png';
+import cityBank from '@images/citybank.png';
 import "@styles/Home.css";
 
 const Home = () => {
@@ -46,6 +49,27 @@ const Home = () => {
         <div className='plans__text container__text'>
           <h2>Find your ideal apartment.</h2>
           <p>Look in multiple zones and cities</p>
+        </div>
+      </section>
+
+      <section className='partners'>
+        <div className='partners__text'>
+          <h3>Finance your new apartment</h3>
+          <p>Talk with our partners</p>
+        </div>
+
+        <div className='partners__logos'>
+          <figure className='partners__figure'>
+            <img className='partners__image' src={monkeyBankLogo} />
+          </figure>
+
+          <figure className='partners__figure'>
+            <img className='partners__image' src={bankKnowhere} />
+          </figure>
+
+          <figure className='partners__figure'>
+            <img className='partners__image' src={cityBank} />
+          </figure>
         </div>
       </section>
     </div>
