@@ -12,9 +12,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+
 :root {
   --background: #06070c;
-  --font-color: rgba(245, 245, 247, 0.8);
+  --font-color: rgba(245, 245, 247, 0.7);
   --font-color-hover: rgba(245, 245, 247, 1);
   --gradient-vertical: linear-gradient(rgba(6,7,12,0), rgba(6,7,12,0.6), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1));
   --gradient-horizontal: linear-gradient(to left,rgba(6,7,12,0), rgba(6,7,12,0.5), rgba(6,7,12,0.7), rgba(6,7,12,0.9), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1));

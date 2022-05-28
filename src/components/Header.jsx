@@ -5,11 +5,23 @@ import MobileNavBar from './MobileNavBar';
 
 const Header = () => {
 
+  const navigation = [
+    {name: 'Home', href: '/', current: true},
+    {name: 'Projects', href: '/', current: false},
+    {name: 'Home Loans', href: '/', current: false},
+    {name: 'About us', href: '/', current: false},
+    {name: 'Work with us', href: '/', current: false},
+    {name: 'Contact', href: '/', current: false},
+  ]
+
   const [toggleNavBar, setToggleNavBar] = useState(false);
 
   const handleMobileNavBar = () => { 
     setToggleNavBar(!toggleNavBar);
   }
+
+  const route = window.location.pathname;
+  console.log(route);
 
   return (
     <div className="Header">
@@ -19,7 +31,17 @@ const Header = () => {
 
       <nav className='Header__nav-bar'>
         <ul className='list'>
-          <li>
+          {navigation.map(item => (
+            <li key={item.name}>
+              <a className={`list__item ${(item.current) ? 'list__item--active' : ''}`}
+                href={item.href}
+                aria-current={item.current ? 'page' : undefined}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+          {/* <li>
             <a className='list__item' href='/'>Home</a>
           </li>
 
@@ -41,7 +63,7 @@ const Header = () => {
 
           <li>
             <a className='list__item' href='/'>Contact</a>
-          </li>
+          </li> */}
         </ul>
     </nav>
 
