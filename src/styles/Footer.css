@@ -1,0 +1,81 @@
+.Footer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--font-color);
+  font-size: var(--font-ln);
+}
+
+.company {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin: 0 20%;
+  border-bottom: 1px solid var(--font-color);
+}
+
+.company__social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media {
+  opacity: 0.8;
+}
+
+.social-media:hover {
+  opacity: 1;
+}
+
+.nav-bar {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.nav-bar .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.list__name {
+  font-size: var(--font-md);
+  font-weight: 300;
+  padding-bottom: 14px;
+  cursor: pointer;
+}
+.list__name:hover {
+  text-decoration: underline;
+}
+
+.list__text {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: var(--font-sm);
+  opacity: 0.7;
+}
+
+.list__text:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.message {
+  height: 20%;
+  font-size: var(--font-sm);
+  font-weight: 100;
+  text-align: center;
+  padding: 0 20px;
+  opacity: 0.8;
+}
+.message a {
+  color: var(--font-color);
+}

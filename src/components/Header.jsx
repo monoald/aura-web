@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div className="Header">
       <h1 className="Header__logo">
-        <a className='Header__home' href='/'>My Real State</a>
+        <a className='Header__home' href='/'>My Real Estate</a>
       </h1>
 
       <nav className='Header__nav-bar'>
@@ -32,7 +32,7 @@ const Header = () => {
           </li>
 
           <li>
-            <a className='list__item' href='/'>Pricing</a>
+            <a className='list__item' href='/'>About us</a>
           </li>
 
           <li>
@@ -40,7 +40,7 @@ const Header = () => {
           </li>
 
           <li>
-            <a className='list__item' href='/'>Contact us</a>
+            <a className='list__item' href='/'>Contact</a>
           </li>
         </ul>
     </nav>

@@ -1,9 +1,15 @@
 .Home {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  height: 100vh;
+  overflow: scroll;
   background-color: var(--background);
+  scroll-snap-type: y proximity;
+}
+.Home::-webkit-scrollbar {
+  display: none;
 }
 
 /*---------------COMMON--------------*/
@@ -14,6 +20,7 @@
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
   color: var(--font-color);
+  scroll-snap-align: center;
 }
 
 .container__figure {
@@ -45,7 +52,8 @@
 /*--------------------BANNER---------------*/
 
 .banner {
-  height: calc(100vh - 44px);
+  /* height: calc(100vh - 44px); */
+  height: 100vh;
 }
 
 .banner__figure {
@@ -141,10 +149,11 @@
   flex-direction: column;
   align-items: center;
   color: var(--font-color);
+  scroll-snap-align: center;
 }
 
 .partners__text {
-  height: 50%;
+  height: 40%;
   width: 100%;
   font-size: var(--font-ln);
   text-align: center;
@@ -154,7 +163,7 @@
 }
 
 .partners__logos {
-  height: 50%;
+  height: 60%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -185,9 +194,12 @@
   align-items: center;
   gap: 144px;
   color: var(--background);
-  /* color: var(--font-color); */
   text-align: center;
   background-image: url('@images/apartmentinside.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  scroll-snap-align: center;
 }
 .cta__text {
   font-size: var(--font-ln);
@@ -205,7 +217,7 @@
   transition: all .3s cubic-bezier(0,0,.5,1);
 }
 .cta__button:hover {
-  transform: scale3d(1.04,1.04,1.04);
+  transform: scale3d(1.06,1.06,1.06);
 }
 
 /*-----------------RESPONSIVE--------------*/

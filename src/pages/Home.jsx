@@ -1,3 +1,5 @@
+import Footer from '@components/Footer';
+import building from '@images/buildings.jpg';
 import plan1 from '@images/plan1.png';
 import plan2 from '@images/plan2.png';
 import plan3 from '@images/plan3.png';
@@ -13,7 +15,7 @@ const Home = () => {
         <figure className="banner__figure container__figure">
           <img
             className="banner__image"
-            src="https://images.freejpg.com.ar/900/0705/buildings-city-urban-architecture-skyscrapers-F100025671.jpg"
+            src={building}
           />
         </figure>
 
@@ -80,6 +82,8 @@ const Home = () => {
 
         <button className='cta__button'>Find it now</button>
       </section>
+      
+      <Footer />
     </div>
   );
 };

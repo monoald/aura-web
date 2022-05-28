@@ -22,7 +22,7 @@ const MobileNavBar = ({ handleMobileNavBar }) => {
           </li>
 
           <li>
-            <a className='list__item' href='/'>Pricing</a>
+            <a className='list__item' href='/'>About us</a>
           </li>
 
           <li>
@@ -30,7 +30,7 @@ const MobileNavBar = ({ handleMobileNavBar }) => {
           </li>
 
           <li>
-            <a className='list__item' href='/'>Contact us</a>
+            <a className='list__item' href='/'>Contact</a>
           </li>
         </ul>
     </nav>
