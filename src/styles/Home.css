@@ -4,8 +4,13 @@
   overflow: scroll;
   background-color: var(--background);
   scroll-snap-type: y proximity;
+  /* for Internet Explorer, Edge */
+  -ms-overflow-style: none;
+  /* for Firefox */
+  scrollbar-width: none;
 }
 .Home::-webkit-scrollbar {
+  /* for Chrome, Safari, and Opera */
   display: none;
 }
 
@@ -48,8 +53,9 @@
 
 /*--------------------BANNER---------------*/
 
-.banner {
+.Home .banner {
   height: 100vh;
+  scroll-margin-top: 10vh;
 }
 
 .banner__figure {

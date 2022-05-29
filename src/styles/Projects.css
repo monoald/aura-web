@@ -1,0 +1,136 @@
+.Projects {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  background-color: var(--background);
+  z-index: 0;
+}
+
+/*----------------COMMON---------------*/
+
+.section {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+  scroll-margin-top: 10vh;
+  position: relative;
+  text-align: center;
+}
+
+/*----------------BANNER0--------------*/
+
+.Projects .banner {
+  display: flex;
+  color: var(--background);
+  align-content: center;
+  position: relative;
+}
+
+.banner__item {
+  height: 50%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.Projects .banner__text {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.lux {
+  background-image: url('@images/apartment1.jpg');
+  background-image: url('@images/edif1.jpg');
+  clip-path: polygon(200% 0, 0 0, 0 100%);
+  z-index: 1;
+  border-bottom: 1px solid var(--background);
+}
+
+.goldenMountain {
+  background-image: url('@images/apartment2.jpg');
+  background-image: url('@images/edif2.jpg');
+  top: 25%;
+  z-index: 0;
+}
+.lion {
+  background-image: url('https://images.pexels.com/photos/4876018/pexels-photo-4876018.jpeg?cs=srgb&dl=pexels-ion-ceban-ionelceban-4876018.jpg&fm=jpg');
+  /* background-image: url('@images/edif3.jpg'); */
+  clip-path: polygon(200% 100%, 0 0, 0 100%);
+  top: 50%;
+  z-index: 1;
+}
+
+.banner__border {
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  background-color: var(--background);
+  z-index: 2;
+}
+
+.banner__border:nth-child(1) {
+  top: 25%;
+  clip-path: polygon(0 97%, 100% 0, 100% 3%, 0 100%);
+}
+
+.banner__border:nth-child(2) {
+  top: 50%;
+  clip-path: polygon(0 0, 100% 97%, 100% 100%, 0 3%);
+}
+
+/*-----------------RESPONSIVE--------------*/
+
+@media (min-width: 768px) {
+  .Projects .banner {
+    width: 100%;
+  }
+
+  .banner__item {
+    width: 50%;
+    height: 100%;
+  
+  }
+
+  .banner__item:hover {
+    background-size: 120%;
+  }
+  .lux {
+    clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+    clip-path: polygon(0 0, 50% 0, 100% 100%,0 100%);
+  }
+  .goldenMountain {
+    top: 0;
+    left: 25%;
+  }
+  .lion {
+    top: 0;
+    left: 50%;
+    clip-path: polygon(0 100%, 50% 0, 100% 0%,100% 100%);
+  }
+
+  .goldenMountain .banner__text {
+    padding: 0 30%;
+  }
+
+  .banner__border {
+    width: 25%;
+    height: 100%;
+  }
+  .banner__border:nth-child(1) {
+    top: 0;
+    left: 25.1%;
+    clip-path: polygon(102% 100%, 2% 0, -1% 0, 99% 100%);
+    clip-path: polygon(97% 100%, 0% 00%, 3% 0%, 100% 100%);
+  }
+  .banner__border:nth-child(2) {
+    top: 0;
+    left: 50%;
+    clip-path: polygon(3% 100%, 0% 100%, 100% -3%, 100% 00%);
+  }
+}

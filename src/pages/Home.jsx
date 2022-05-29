@@ -1,3 +1,4 @@
+import Header from '@components/Header';
 import Footer from '@components/Footer';
 import building from '@images/buildings.jpg';
 import plan1 from '@images/plan1.png';
@@ -11,6 +12,8 @@ import "@styles/Home.css";
 const Home = () => {
   return (
     <div className="Home">
+      <Header />
+      
       <section className="banner container">
         <figure className="banner__figure container__figure">
           <img
@@ -84,8 +87,8 @@ const Home = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+      </div>
+    );
 };
 
 export default Home;

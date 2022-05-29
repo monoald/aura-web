@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { MenuIcon } from '@heroicons/react/solid'
 import '@styles/Header.css'
 import MobileNavBar from './MobileNavBar';
@@ -7,7 +8,7 @@ const Header = () => {
 
   const navigation = [
     {name: 'Home', href: '/', current: true},
-    {name: 'Projects', href: '/', current: false},
+    {name: 'Projects', href: '/projects', current: false},
     {name: 'Home Loans', href: '/', current: false},
     {name: 'About us', href: '/', current: false},
     {name: 'Work with us', href: '/', current: false},
@@ -33,12 +34,12 @@ const Header = () => {
         <ul className='list'>
           {navigation.map(item => (
             <li key={item.name}>
-              <a className={`list__item ${(item.current) ? 'list__item--active' : ''}`}
-                href={item.href}
+              <Link className={`list__item ${(item.current) ? 'list__item--active' : ''}`}
+                to={item.href}
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
           {/* <li>
