@@ -4,6 +4,7 @@ import Projects from '@pages/Projects';
 import Layout from '@containers/Layout';
 import '@styles/Global.css'
 import useDetectSectionPage from '@hooks/useDetectSectionPage';
+import HomeLoans from '../pages/HomeLoans';
 
 const App = () => {
   
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home/>} />
           <Route exact path='/projects' element={<Projects/>} />
+          <Route exact path='/home-loans' element={<HomeLoans/>} />
         </Routes>
       </Layout>
   )

@@ -83,7 +83,7 @@ const Home = () => {
           <h2>Search the apartment of your dreams</h2>
         </div>
 
-        <button className='cta__button'>Find it now</button>
+        <button className='button'>Find it now</button>
       </section>
       
       <Footer />

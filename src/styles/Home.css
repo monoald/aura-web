@@ -206,7 +206,7 @@
   font-size: var(--font-ln);
 }
 
-.cta__button {
+.button {
   font-size: var(--font-md);
   width: 160px;
   height: 52px;
@@ -217,7 +217,7 @@
   cursor: pointer;
   transition: all .3s cubic-bezier(0,0,.5,1);
 }
-.cta__button:hover {
+.button:hover {
   transform: scale3d(1.06,1.06,1.06);
 }
 

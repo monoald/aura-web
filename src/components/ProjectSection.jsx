@@ -42,6 +42,7 @@ const ProjectSection = ({ project }) => {
 
       <figure className={`ProjectSection__image ${project.id}__image`}>
         <img src={project.images.insideImage} />
+        <button className='button'>Request Tour</button>
       </figure>
 
       <figure className={`ProjectSection__plans ${project.id}__plans`}>

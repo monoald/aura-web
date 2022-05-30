@@ -6,6 +6,7 @@
   color: var(--font-color);
   font-size: var(--font-ln);
   border-top: 1px solid rgba(244, 240, 240, 0.2);
+  scroll-snap-align: center;
 }
 
 .company {

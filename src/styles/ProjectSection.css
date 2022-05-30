@@ -41,10 +41,14 @@
   height: 40%;
   overflow: hidden;
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 .ProjectSection__image img {
   width: 100%;
+}.ProjectSection__image .button {
+  position: absolute;
 }
 
 .ProjectSection__plans {
