@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import facebookLogo from '@icons/facebook.svg';
 import instagramLogo from '@icons/instagram.svg';
 import linkedInLogo from '@icons/linkedin.svg';
@@ -28,23 +29,23 @@ const Footer = () => {
 
       <nav className='nav-bar'>
         <ul className='list'>
-          <h2 className='list__name'>Projects</h2>
+          <h2 className='list__name'><Link to='/projects'>Projects</Link></h2>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Lux</a>
+            <Link to='/projects#lux' className='list__text'>Lux</Link>
           </li>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Golden Mountain</a>
+            <Link to='/projects#goldenMountain' className='list__text'>Golden Mountain</Link>
           </li>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Lion</a>
+            <Link to='/projects#lion' className='list__text'>Lion</Link>
           </li>
         </ul>
 
         <ul className='list'>
-          <h2 className='list__name'>Bank Partners</h2>
+          <h2 className='list__name'><a href='/'>Bank Partners</a></h2>
 
           <li className='list__item'>
             <a href='/' className='list__text'>Monkey Bank</a>
@@ -60,7 +61,7 @@ const Footer = () => {
         </ul>
 
         <ul className='list'>
-          <h2 className='list__name'>Others</h2>
+          <h2 className='list__name'><a href='/'>Others</a></h2>
 
           <li className='list__item'>
             <a href='/' className='list__text'>About us</a>

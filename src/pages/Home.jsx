@@ -1,9 +1,9 @@
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import building from '@images/buildings.jpg';
-import plan1 from '@images/plan1.png';
-import plan2 from '@images/plan2.png';
-import plan3 from '@images/plan3.png';
+import luxPlan from '@images/luxPlan.png';
+import goldenMountainPlan from '@images/goldenMountainPlan.png';
+import lionPlan from '@images/lionPlan.png';
 import monkeyBankLogo from '@images/monkeybank.png';
 import bankKnowhere from '@images/bankknowhere.png';
 import cityBank from '@images/citybank.png';
@@ -33,19 +33,19 @@ const Home = () => {
       <section className="plans container">
         <div className='carousel'>
           <figure className='carousel__item'>
-            <img className='carousel__image' src={plan1} />
+            <img className='carousel__image' src={luxPlan} />
           </figure>
 
           <figure className='carousel__item'>
-            <img className='carousel__image' src={plan2} />
+            <img className='carousel__image' src={goldenMountainPlan} />
           </figure>
 
           <figure className='carousel__item'>
-            <img className='carousel__image' src={plan3} />
+            <img className='carousel__image' src={lionPlan} />
           </figure>
 
           <figure className='carousel__item'>
-            <img className='carousel__image' src={plan1} />
+            <img className='carousel__image' src={luxPlan} />
           </figure>
         </div>
 

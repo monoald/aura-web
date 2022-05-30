@@ -19,6 +19,7 @@ body {
   --font-color-hover: rgba(245, 245, 247, 1);
   --gradient-vertical: linear-gradient(rgba(6,7,12,0), rgba(6,7,12,0.6), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1));
   --gradient-horizontal: linear-gradient(to left,rgba(6,7,12,0), rgba(6,7,12,0.5), rgba(6,7,12,0.7), rgba(6,7,12,0.9), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1));
+  --font-eln: 2.6rem;
   --font-ln: 2.2rem;
   --font-md: 1.8rem;
   --font-sm: 1.4rem;

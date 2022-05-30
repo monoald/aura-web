@@ -5,10 +5,11 @@
   background-color: var(--background);
   color: var(--font-color);
   font-size: var(--font-ln);
+  border-top: 1px solid rgba(244, 240, 240, 0.2);
 }
 
 .company {
-  height: 30%;
+  height: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +34,7 @@
 }
 
 .nav-bar {
-  height: 50%;
+  height: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -51,6 +52,10 @@
   font-weight: 300;
   padding-bottom: 14px;
   cursor: pointer;
+}
+.list__name a {
+  color: var(--font-color);
+  text-decoration: none;
 }
 .list__name:hover {
   text-decoration: underline;
@@ -75,6 +80,9 @@
   text-align: center;
   padding: 0 20px;
   opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .message a {
   color: var(--font-color);
