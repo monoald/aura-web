@@ -21,8 +21,8 @@ const Header = () => {
     setToggleNavBar(!toggleNavBar);
   }
 
-  const route = window.location.pathname;
-  console.log(route);
+  // const route = window.location.pathname;
+  // console.log(route);
 
   return (
     <div className="Header">
@@ -42,29 +42,6 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          {/* <li>
-            <a className='list__item' href='/'>Home</a>
-          </li>
-
-          <li>
-            <a className='list__item' href='/'>Projects</a>
-          </li>
-
-          <li>
-            <a className='list__item' href='/'>Home Loans</a>
-          </li>
-
-          <li>
-            <a className='list__item' href='/'>About us</a>
-          </li>
-
-          <li>
-            <a className='list__item' href='/'>Work with us</a>
-          </li>
-
-          <li>
-            <a className='list__item' href='/'>Contact</a>
-          </li> */}
         </ul>
     </nav>
 

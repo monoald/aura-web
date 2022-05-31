@@ -1,6 +1,7 @@
 import '@styles/PartnerDetails.css';
+import { Link } from 'react-router-dom';
 
-const PartnerDetails = ({ partner }) => {
+const PartnerDetails = ({ partner, handleBankSelected }) => {
   return (
     <div className='partner'>
       <figure className='partner__image partner__item'>
@@ -12,7 +13,9 @@ const PartnerDetails = ({ partner }) => {
       <p className='partner__item'>{partner.maxFinancing}%</p>
       <p className='partner__item'>{partner.maxTermYears} years</p>
       <div className=' partner__item'>
-        <button className='partner__contact'>Contact</button>
+        <a href='#contact'>
+          <button className='partner__contact' onClick={() => handleBankSelected(partner.id)}>Contact</button>
+        </a>
       </div>
     </div>
   )

@@ -36,6 +36,7 @@
 .partner__contact:hover {
   background-color: var(--font-color);
   color: var(--background);
+  border: none;
 }
 
 
