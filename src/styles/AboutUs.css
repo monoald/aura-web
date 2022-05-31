@@ -1,0 +1,160 @@
+.AboutUs {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  background-color: var(--background);
+  color: var(--font-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AboutUs .banner {
+  width: 100%;
+  height: 30vh;
+  padding: 0 40px;
+  scroll-snap-align: center;
+  scroll-margin-top: 12vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.AboutUs .banner::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('@images/city.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: "";
+  filter: saturate(50%);
+}
+
+.info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 4px;
+}
+.info__data {
+  font-size: 3.6rem;
+  font-weight: bolder;
+}
+.info__title {
+  font-size: 2rem;
+  }
+
+.text {
+  height: 70vh;
+  padding: 40px 20px;
+  font-size: var(--font-sm);
+  text-align: justify;
+}
+
+.text__title {
+  padding-bottom: 20px;
+}
+
+.extra {
+  display: none;
+}
+
+/*---------------REGULATORY---------*/
+
+.regulatory {
+  width: 100%;
+  height: 100vh;
+  font-size: var(--font-sm);
+  padding: 60px;
+  scroll-snap-align: center;
+}
+
+.regulatory__title {
+  height: 20%;
+}
+
+.regulatory__item {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.regulatory__image {
+  width: 100%;
+}
+
+/*---------------RESPONSIVE---------*/
+
+@media (min-width: 768px) {
+  .AboutUs .banner {
+    height: 100vh;
+    justify-content: center;
+    padding: 160px 0;
+  }
+
+  .info__data {
+    font-size: 6rem;
+  }
+  .info__title {
+    font-size: 2.6rem;
+  }
+
+  .text {
+    height: 60vh;
+    padding: 30px;
+    width: 50%;
+    
+  }
+
+  .extra {
+    width: 50%;
+    height: 60vh;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 180px;
+  }
+  .extra__title {
+    font-size: 5rem;
+  }
+
+  .regulatory {
+    height: 40%;
+    scroll-snap-align: none;
+  }
+
+  .regulatory__item {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .regulatory__image {
+    width: 20%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1008px) {
+  .info {
+    width: 24%;
+    color: aliceblue;
+  }
+  .text {
+    padding: 60px;
+  }
+}
