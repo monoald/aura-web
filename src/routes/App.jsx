@@ -6,6 +6,7 @@ import AboutUs from '@pages/AboutUs';
 import Layout from '@containers/Layout';
 import '@styles/Global.css'
 import useDetectSectionPage from '@hooks/useDetectSectionPage';
+import WorkWithUs from '../pages/WorkWithUs';
 
 const App = () => {
   
@@ -18,6 +19,7 @@ const App = () => {
           <Route exact path='/projects' element={<Projects/>} />
           <Route exact path='/home-loans' element={<HomeLoans/>} />
           <Route exact path='/about-us' element={<AboutUs/>} />
+          <Route exact path='/work-with-us' element={<WorkWithUs/>} />
         </Routes>
       </Layout>
   )

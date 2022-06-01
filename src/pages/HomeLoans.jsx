@@ -80,22 +80,22 @@ const HomeLoans = () => {
 
         <form action='/' className='loan-form' ref={loanForm}>
           <div className='loan-form__item'>
-            <label htmlFor="name" className="loan-form__name loan-form__subtitle">Name</label>
+            <label htmlFor="name" className="loan-form__subtitle">Name</label>
             <input type="text" name="name" placeholder="Carlos Aldazosa" className="loan-form__input" required/>
           </div>
 
           <div className='loan-form__item'>
-            <label htmlFor="email" className="loan-form__email loan-form__subtitle">Email</label>
+            <label htmlFor="email" className="loan-form__subtitle">Email</label>
             <input type="email" name="email" placeholder="carlos.aldazosa@example.com" className="loan-form__input" required/>
           </div>
 
           <div className='loan-form__item'>
-            <label htmlFor="phone" className="loan-form__phone loan-form__subtitle">Phone</label>
+            <label htmlFor="phone" className="loan-form__subtitle">Phone</label>
             <input type="number" name="phone" placeholder="+591 12345678" className="loan-form__input" required/>
           </div>
 
           <div className='loan-form__item'>
-            <label htmlFor="bank" className="loan-form__bank loan-form__subtitle">Phone</label>
+            <label htmlFor="bank" className="loan-form__subtitle">Bank</label>
             <select
               id="bank"
               name="bank"
