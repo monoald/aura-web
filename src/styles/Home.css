@@ -176,7 +176,6 @@
   width: 44%;
   height: 100%;
   max-height: 44%;
-  cursor: pointer;
 }
 
 .partners__image {
@@ -260,7 +259,5 @@
     width: 30%;
   }
 
-  .partners__figure:hover {
-    background-color: rgba(210, 240, 250, 0.1);
-  }
+  
 }

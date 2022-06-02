@@ -29,7 +29,9 @@ const Footer = () => {
 
       <nav className='nav-bar'>
         <ul className='list'>
-          <h2 className='list__name'><Link to='/projects'>Projects</Link></h2>
+          <h2 className='list__name'>
+            <Link to='/projects'>Projects</Link>
+          </h2>
 
           <li className='list__item'>
             <Link to='/projects#lux' className='list__text'>Lux</Link>
@@ -45,34 +47,38 @@ const Footer = () => {
         </ul>
 
         <ul className='list'>
-          <h2 className='list__name'><a href='/'>Bank Partners</a></h2>
+          <h2 className='list__name'>
+            <Link to='/home-loans'>Bank Partners</Link>
+          </h2>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Monkey Bank</a>
+            <Link to='/home-loans#partners' className='list__text'>Monkey Bank</Link>
           </li>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Bank of Knowhere</a>
+            <Link to='/home-loans#partners' className='list__text'>Bank of Knowhere</Link>
           </li>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>City Bank</a>
+            <Link to='/home-loans#partners' className='list__text'>City Bank</Link>
           </li>
         </ul>
 
         <ul className='list'>
-          <h2 className='list__name'><a href='/'>Others</a></h2>
+          <h2 className='list__name'>
+            Others
+          </h2>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>About us</a>
+            <Link to='/about-us' className='list__text'>About us</Link>
           </li>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Work with us</a>
+            <Link to='/work-with-us' className='list__text'>Work with us</Link>
           </li>
 
           <li className='list__item'>
-            <a href='/' className='list__text'>Contact</a>
+            <Link to='/contact' className='list__text'>Contact</Link>
           </li>
         </ul>
       </nav>

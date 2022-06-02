@@ -47,7 +47,8 @@
 }
 .ProjectSection__image img {
   width: 100%;
-}.ProjectSection__image .button {
+}
+.button-container {
   position: absolute;
 }
 

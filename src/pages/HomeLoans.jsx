@@ -58,7 +58,7 @@ const HomeLoans = () => {
 
       </section>
 
-      <section className='partners-comparison' >
+      <section className='partners-comparison' id='partners' >
         <div className='title'>
           <p className='title__head-space title__item'></p>
 

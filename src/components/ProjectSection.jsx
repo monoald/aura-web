@@ -1,4 +1,5 @@
 import '@styles/ProjectSection.css'
+import { Link } from 'react-router-dom'
 
 const ProjectSection = ({ project }) => {
   return (
@@ -42,7 +43,9 @@ const ProjectSection = ({ project }) => {
 
       <figure className={`ProjectSection__image ${project.id}__image`}>
         <img src={project.images.insideImage} />
-        <button className='button'>Request Tour</button>
+        <Link to='/contact' className='button-container'>
+          <button className='button'>Request Tour</button>
+        </Link>
       </figure>
 
       <figure className={`ProjectSection__plans ${project.id}__plans`}>

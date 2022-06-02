@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MenuIcon } from '@heroicons/react/solid'
 import '@styles/Header.css'
 import MobileNavBar from './MobileNavBar';
@@ -9,10 +9,10 @@ const Header = () => {
   const navigation = [
     {name: 'Home', href: '/', current: true},
     {name: 'Projects', href: '/projects', current: false},
-    {name: 'Home Loans', href: '/', current: false},
-    {name: 'About us', href: '/', current: false},
-    {name: 'Work with us', href: '/', current: false},
-    {name: 'Contact', href: '/', current: false},
+    {name: 'Home Loans', href: '/home-loans', current: false},
+    {name: 'About us', href: '/about-us', current: false},
+    {name: 'Work with us', href: '/work-with-us', current: false},
+    {name: 'Contact', href: '/contact', current: false},
   ]
 
   const [toggleNavBar, setToggleNavBar] = useState(false);
@@ -34,12 +34,21 @@ const Header = () => {
         <ul className='list'>
           {navigation.map(item => (
             <li key={item.name}>
-              <Link className={`list__item ${(item.current) ? 'list__item--active' : ''}`}
+              {/* <NavLink className={`list__item ${(item.current) ? 'list__item--active' : ''}`}
                 to={item.href}
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
-              </Link>
+              </NavLink> */}
+                <NavLink 
+                // className='list__item' activeClassName='list__item--active'
+                  className={({ isActive }) =>
+                    isActive ? ' list__item list__item--active' : 'list__item'
+                  }
+                  to={item.href}
+                >
+                  {item.name}
+                </NavLink>
             </li>
           ))}
         </ul>

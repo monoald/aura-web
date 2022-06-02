@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import building from '@images/buildings.jpg';
@@ -83,7 +84,9 @@ const Home = () => {
           <h2>Search the apartment of your dreams</h2>
         </div>
 
-        <button className='button'>Find it now</button>
+        <Link to='/projects'>
+          <button className='button'>Find it now</button>
+        </Link>
       </section>
       
       <Footer />
