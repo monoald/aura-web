@@ -1,0 +1,114 @@
+.Contact {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  color: var(--font-color);
+  font-size: var(--font-sm);
+  overflow: scroll;
+}
+
+.media {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.media__container {
+  display: flex;
+  gap: 16px;
+}
+
+.media__image {
+  opacity: 0.7;
+}
+.media__image:hover {
+  opacity: 1;
+}
+
+/*---------------MESSAGE----------*/
+
+.message-container {
+  width: 100%;
+  height: 60vh;
+  padding: 40px
+}
+.contact-form {
+  width: 100%;
+  height: 90%;
+  border: 1px solid var(--font-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 28px;
+}
+.contact-form__item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.contact-form__input {
+  background-color: transparent;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 8px;
+  height: 28px;
+  padding: 8px;
+}
+.message-form {
+  width: 100%;
+  height: 40%;
+}
+
+.message-form__input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.contact-form__button {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 6px;
+}
+.contact-form__button:hover {
+  border: none;
+  background-color: var(--font-color);
+  color: var(--background);
+}
+
+/*------------RESPONSIVE---------*/
+
+@media (min-width: 768px) {
+  .media {
+    height: 30vh;
+  }
+  .contact-form {
+    /* height: 100%; */
+    width: 60%;
+  }
+  .message-container {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1008px) {
+  .contact-form {
+    width: 40%;
+  }
+}

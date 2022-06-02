@@ -98,9 +98,7 @@
   color: var(--background);
 }
 
-
-/*-------------FORM-2-----------*/
-
+/*-------------RESPONSIVE-----------*/
 @media (min-width: 1008px) {
   .WorkWithUs .banner {
     width: 50%;

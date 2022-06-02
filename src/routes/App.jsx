@@ -3,10 +3,11 @@ import Home from '@pages/Home'
 import Projects from '@pages/Projects';
 import HomeLoans from '@pages/HomeLoans';
 import AboutUs from '@pages/AboutUs';
+import WorkWithUs from '@pages/WorkWithUs';
+import Contact from '@pages/Contact';
 import Layout from '@containers/Layout';
 import '@styles/Global.css'
 import useDetectSectionPage from '@hooks/useDetectSectionPage';
-import WorkWithUs from '../pages/WorkWithUs';
 
 const App = () => {
   
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path='/home-loans' element={<HomeLoans/>} />
           <Route exact path='/about-us' element={<AboutUs/>} />
           <Route exact path='/work-with-us' element={<WorkWithUs/>} />
+          <Route exact path='/contact' element={<Contact/>} />
         </Routes>
       </Layout>
   )
