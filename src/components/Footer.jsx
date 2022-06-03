@@ -27,7 +27,7 @@ const Footer = () => {
         </figure>
       </section>
 
-      <nav className='nav-bar'>
+      <nav className='Footer__nav-bar'>
         <ul className='list'>
           <h2 className='list__name'>
             <Link to='/projects'>Projects</Link>

@@ -16,6 +16,7 @@
   align-items: center;
   text-align: center;
   gap: 40px;
+  padding: 0 20px;
 }
 
 .media__container {

@@ -35,7 +35,7 @@
   opacity: 1;
 }
 
-.nav-bar {
+.Footer__nav-bar {
   height: 40%;
   display: flex;
   justify-content: space-around;
@@ -43,7 +43,7 @@
   padding: 0 5%;
 }
 
-.nav-bar .list {
+.Footer__nav-bar .list {
   list-style: none;
   display: flex;
   flex-direction: column;
