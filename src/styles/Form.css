@@ -1,0 +1,98 @@
+.form__title {
+  width: 100%;
+}
+
+.form {
+  width: 80%;
+  height: 45vh;
+  padding: 20px 0;
+  border: 1px solid var(--font-color);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 22px 0;
+  position: relative;
+  color: var(--font-color);
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  max-width: 240px;
+  height: auto;
+  gap: 12px;
+  text-align: start;
+}
+
+.form__subtitle {
+  width: 80%;
+}
+
+.form__input {
+  border: 1px solid var(--font-color);
+  border-radius: 6px;
+  background-color: transparent;
+  width: 80%;
+  height: 32px;
+  font-size: var(--font-sm);
+  padding: 0 8px;
+  color: var(--font-color);
+}
+
+.form__input:-webkit-autofill {
+  border: 1px solid var(--font-color);
+  -webkit-text-fill-color: var(--font-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--background) inset;
+} 
+
+.form__select {
+  background-color: var(--background);
+}
+
+.form__submit {
+  bottom: 48px;
+  width: 64px;
+  min-width: 64px;
+  height: 28px;
+  margin: 0 100%;
+  font-size: var(--font-sm);
+  background-color: transparent;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.form__submit:hover {
+  background-color: var(--font-color);
+  color: var(--background);
+  border: none;
+}
+
+/*------------RESPONSIVE-------------*/
+
+@media (min-width: 768px) {
+  .form {
+    width: 50%;
+    height: 50vh;
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 1008px) {
+  .form {
+    width: 40%;
+  }
+}
+
+@media (min-height: 740px) {
+  .form {
+    height: 40vh;
+  }
+}

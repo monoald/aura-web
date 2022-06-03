@@ -1,124 +1,212 @@
-import { useRef, useState } from 'react';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import '@styles/WorkWithUs.css';
+import { useRef, useState } from "react";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import Form from "@components/Form";
+import Alert from "@components/Alert";
+import IncompleteForm from "@components/IncompleteForm";
+import useErrorMessage from "@hooks/useErrorMessage";
+import useAlert from "@hooks/useAlert";
+import useSubmit from "@hooks/useSubmit";
+import "@styles/WorkWithUs.css";
 
 const WorkWithUs = () => {
-  const hireUsForm = useRef(null)
-  const [form, setForm] = useState([
+  const hireUsForm = useRef(null);
+  const careerForm = useRef(null);
+  const { errorMessage, showMessage, hideMessage } = useErrorMessage();
+  const { alert, setAlert, toggleAlert } = useAlert();
+  const { submit } = useSubmit();
+
+  const [toggleForm, setToggleForm] = useState([
     {
-      id: 'hireUs',
+      id: "hireUs",
       active: true,
     },
     {
-      id: 'career',
+      id: "career",
       active: false,
-    }
-  ])
+    },
+  ]);
 
-  const handleForm = (id) => { 
-    const newForm = [...form];
-    const deactiveForm = newForm.find(form => form.active === true);
+  const form1 = {
+    name: "hire-form",
+    ref: hireUsForm,
+    title: "Hire Us",
+
+    message: "Information sent, we will contact you soon.",
+    inputs: [
+      {
+        name: "company-name",
+        title: "Company",
+        type: "text",
+        placeholder: "My Real Estate",
+      },
+      {
+        name: "email",
+        title: "Email",
+        type: "email",
+        placeholder: "example@myrealestate.com",
+      },
+      {
+        name: "phone",
+        title: "Phone",
+        type: "number",
+        placeholder: "+591 12345678",
+      },
+      {
+        name: "city",
+        title: "City",
+        type: "text",
+        placeholder: "La Paz",
+      },
+    ],
+    select: false,
+  };
+
+  const form2 = {
+    name: "career-form",
+    ref: careerForm,
+    title: "Career",
+
+    message:
+      "Information sent, we will contact you soon. \n You can visit our LinkedIn to see all the jobs.",
+    inputs: [
+      {
+        name: "name",
+        title: "Name",
+        type: "text",
+        placeholder: "Carlos S. Aldazosa",
+      },
+      {
+        name: "email",
+        title: "Email",
+        type: "email",
+        placeholder: "carlos@example.com",
+      },
+      {
+        name: "phone",
+        title: "Phone",
+        type: "number",
+        placeholder: "+591 12345678",
+      },
+    ],
+    select: {
+      name: "area",
+      title: "Area",
+      options: [
+        {
+          value: "development",
+          selected: false,
+          text: "Development",
+        },
+        {
+          value: "economics",
+          selected: false,
+          text: "Economics",
+        },
+        {
+          value: "finance",
+          selected: false,
+          text: "Finance",
+        },
+        {
+          value: "marketing",
+          selected: false,
+          text: "Marketing",
+        },
+        {
+          value: "sales",
+          selected: false,
+          text: "Sales",
+        },
+        {
+          value: "engineering",
+          selected: false,
+          text: "Engineering",
+        },
+        {
+          value: "architecture",
+          selected: false,
+          text: "Architecture",
+        },
+        {
+          value: "construction",
+          selected: false,
+          text: "Construction",
+        },
+        {
+          value: "design",
+          selected: false,
+          text: "Design",
+        },
+      ],
+    },
+  };
+
+  const handleForm = (id) => {
+    const newForm = [...toggleForm];
+    const deactiveForm = newForm.find((form) => form.active === true);
     deactiveForm.active = !deactiveForm.active;
-    const activeForm = newForm.find(form => form.id === id);
+    const activeForm = newForm.find((form) => form.id === id);
     activeForm.active = !activeForm.active;
-    setForm(newForm);
-  }
+    setToggleForm(newForm);
+  };
 
   return (
-    <div className="WorkWithUs">
-      <Header />
+    <>
+      <div className="WorkWithUs">
+        <Header />
 
-      <section className='banner'>
-        <h2 className='banner__title'>You can hire us or work in our company!</h2>
+        <section className="banner">
+          <h2 className="banner__title">
+            You can hire us or work in our company!
+          </h2>
 
-        <div className='banner__buttons'>
-          <button className='button' onClick={() => handleForm(form[0].id)}>Hire us</button>
-          <button className='button' onClick={() => handleForm(form[1].id)}>Career</button>
-        </div>
-      </section>
+          <div className="banner__buttons">
+            <button
+              className="button"
+              onClick={() => handleForm(toggleForm[0].id)}
+            >
+              Hire us
+            </button>
+            <button
+              className="button"
+              onClick={() => handleForm(toggleForm[1].id)}
+            >
+              Career
+            </button>
+          </div>
+        </section>
 
-      <section className='forms'>
-        { form[0].active &&
-          <form action='/' className='work-form' ref={hireUsForm} >
+        <section className="forms">
+          {toggleForm[0].active && (
+            <Form
+              formInfo={form1}
+              handleSubmit={() =>
+                submit(setAlert, hideMessage, showMessage, form1)
+              }
+            />
+          )}
 
-            <h2 className='work-form__title'>Hire Us</h2>
+          {toggleForm[1].active && (
+            <Form
+              formInfo={form2}
+              handleSubmit={() =>
+                submit(setAlert, hideMessage, showMessage, form2)
+              }
+            />
+          )}
 
-            <div className='work-form__item'>
-              <label htmlFor="name" className="work-form__subtitle">Company</label>
-              <input type="text" name="name" placeholder="My real estate" className="work-form__input" required/>
-            </div>
+          {errorMessage.active && (
+            <IncompleteForm message={errorMessage.message} />
+          )}
+        </section>
 
-            <div className='work-form__item'>
-              <label htmlFor="email" className="work-form__subtitle">Email</label>
-              <input type="email" name="email" placeholder="myrealestate@example.com" className="work-form__input" required/>
-            </div>
+        <Footer />
+      </div>
 
-            <div className='work-form__item'>
-              <label htmlFor="phone" className="work-form__subtitle">Phone</label>
-              <input type="number" name="phone" placeholder="+591 12345678" className="work-form__input" required/>
-            </div>
+      {alert.active && <Alert alert={alert} handleClose={toggleAlert} />}
+    </>
+  );
+};
 
-            <div className='work-form__item'>
-              <label htmlFor="city" className="work-form__subtitle">City</label>
-              <input type="text" name="city" placeholder="La Paz" className="work-form__input" required/>
-            </div>
-
-            <input type="submit" className='work-form__button' />
-          </form>
-        }
-
-        { form[1].active && 
-          <form action='/' className='work-form' ref={hireUsForm} >
-
-            <h2 className='work-form__title'>Career</h2>
-
-            <div className='work-form__item'>
-              <label htmlFor="name" className="work-form__subtitle">Name</label>
-              <input type="text" name="name" placeholder="Carlos S. Aldazosa" className="work-form__input" required/>
-            </div>
-
-            <div className='work-form__item'>
-              <label htmlFor="email" className="work-form__subtitle">Email</label>
-              <input type="email" name="email" placeholder="carlos@example.com" className="work-form__input" required/>
-            </div>
-
-            <div className='work-form__item'>
-              <label htmlFor="phone" className="work-form__subtitle">Phone</label>
-              <input type="number" name="phone" placeholder="+591 12345678" className="work-form__input" required/>
-            </div>
-
-            <div className='work-form__item'>
-              <label htmlFor="area" className="work-form__subtitle">Area</label>
-              <select
-                id="area"
-                name="area"
-                className="loan-form__input loan-form__select"
-                required
-              >
-                <option value="development">Development</option>
-                <option value="economics">Economics</option>
-                <option value="finance">Finance</option>
-                <option value="marketing">Marketing</option>
-                <option value="sales">Sales</option>
-                <option value="engineering">Engineering</option>
-                <option value="design">Design</option>
-                <option value="architecture">Architecture</option>
-                <option value="construction">Construction</option>
-              </select>
-            </div>
-
-            <input type="submit" className='work-form__button' />
-          </form>
-        }
-
-      </section>
-
-
-
-      <Footer />
-    </div>
-  )
-}
-
-export default WorkWithUs
+export default WorkWithUs;
