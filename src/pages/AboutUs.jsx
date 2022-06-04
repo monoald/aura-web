@@ -4,31 +4,31 @@ import '@styles/AboutUs.css'
 
 const AboutUs = () => {
   return (
-    <div className="AboutUs">
+    <div className="AboutUs Page">
       <Header />
 
       <section className="banner">
         <div className="info">
           <p className="info__data">5</p>
-          <div className="info__underline" />
+  
           <h2 className="info__title">Projects</h2>
         </div>
 
         <div className="info">
           <p className="info__data">3</p>
-          <div className="info__underline" />
+  
           <h2 className="info__title">Cities</h2>
         </div>
 
         <div className="info">
           <p className="info__data">+100</p>
-          <div className="info__underline" />
+  
           <h2 className="info__title">Sold Apartments</h2>
         </div>
 
         <div className="info">
           <p className="info__data">+40</p>
-          <div className="info__underline" />
+  
           <h2 className="info__title">100% Home Loans</h2>
         </div>
       </section>

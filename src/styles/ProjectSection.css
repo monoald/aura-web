@@ -1,7 +1,6 @@
 .ProjectSection {
   width: 100%;
   height: 100vh;
-  color: var(--font-color);
   display: flex;
   flex-wrap: wrap;
   scroll-snap-align: center;
@@ -27,7 +26,6 @@
   font-size: var(--font-sm);
   display: flex;
   justify-content: space-around;
-  text-align: center;
 }
 
 .details__column {
@@ -76,7 +74,6 @@
   .ProjectSection__image {
     height: 55%;
     width: 100%;
-    overflow: hidden;
     order: 1;
   }
   .ProjectSection__image img {

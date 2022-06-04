@@ -14,7 +14,6 @@
   align-items: center;
   gap: 22px 0;
   position: relative;
-  color: var(--font-color);
 }
 
 .form__item {

@@ -1,22 +1,11 @@
-.Projects {
-  width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-  background-color: var(--background);
-  z-index: 0;
-  scroll-behavior: smooth;
-}
 
 /*----------------COMMON---------------*/
 
 .section {
-  width: 100%;
   height: 100vh;
   scroll-snap-align: center;
   scroll-margin-top: 12vh;
   position: relative;
-  text-align: center;
 }
 
 /*----------------BANNER0--------------*/
@@ -24,7 +13,6 @@
 .Projects .banner {
   display: flex;
   align-content: center;
-  position: relative;
 }
 
 .banner__item {
@@ -99,7 +87,6 @@
     background-size: 160%;
   }
   .banner .lux {
-    clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
     clip-path: polygon(0 0, 50% 0, 100% 100%,0 100%);
   }
   .banner .goldenMountain {
@@ -123,7 +110,6 @@
   .banner__border:nth-child(1) {
     top: 0;
     left: 25.1%;
-    clip-path: polygon(102% 100%, 2% 0, -1% 0, 99% 100%);
     clip-path: polygon(97% 100%, 0% 00%, 3% 0%, 100% 100%);
   }
   .banner__border:nth-child(2) {

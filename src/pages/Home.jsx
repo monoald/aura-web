@@ -12,7 +12,7 @@ import "@styles/Home.css";
 
 const Home = () => {
   return (
-    <div className="Home">
+    <div className="Home Page">
       <Header />
       
       <section className="banner container">

@@ -153,7 +153,7 @@ const WorkWithUs = () => {
 
   return (
     <>
-      <div className="WorkWithUs">
+      <div className="WorkWithUs Page">
         <Header />
 
         <section className="banner">

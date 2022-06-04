@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="Contact">
+      <div className="Contact Page">
         <Header />
 
         <section className='media'>

@@ -108,7 +108,7 @@ const HomeLoans = () => {
 
   return (
     <>
-      <div className="HomeLoans">
+      <div className="HomeLoans Page">
         <Header />
 
         <section className="banner">
