@@ -8,7 +8,8 @@ const root  = ReactDOMClient.createRoot(
 );
 
 root.render(
-  <BrowserRouter basename='/real-estate-web'> 
+  // <BrowserRouter basename='/real-estate-web'> 
+  <BrowserRouter> 
     <App />
   </BrowserRouter>
 )

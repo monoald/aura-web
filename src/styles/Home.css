@@ -181,6 +181,7 @@
 }
 .cta__text {
   font-size: var(--font-ln);
+  color: var(--background);
 }
 
 .button {

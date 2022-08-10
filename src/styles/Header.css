@@ -15,7 +15,9 @@
   opacity: 0.8;
   z-index: 1;
 }
-
+.Header__logo {
+  font-size: 2.2rem;
+}
 .Header__home {
   color: var(--font-color-hover);
   text-decoration: none;
@@ -72,10 +74,10 @@
 }
 
 .menu {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  right: 24px;
+  right: 16px;
   color: var(--font-color);
   cursor: pointer;
 }
@@ -88,6 +90,7 @@
     left: 6vw;
     width: 26vw;
     text-align: start;
+    font-size: 2.8rem;
   }
 
   .menu {

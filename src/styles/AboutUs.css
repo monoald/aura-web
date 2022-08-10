@@ -47,7 +47,7 @@
   }
 
 .text {
-  height: 70vh;
+  height: auto;
   padding: 40px 20px;
   font-size: var(--font-sm);
   text-align: justify;
