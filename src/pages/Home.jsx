@@ -30,6 +30,9 @@ const Home = () => {
         <div className="banner__text container__text">
           <h2>Find your ideal apartment.</h2>
           <p>Look in multiple zones and cities</p>
+          <Link to='/about-us'>
+            <button className='primary-button'>Who we are?</button>
+          </Link>
         </div>
       </section>
 
@@ -68,25 +71,31 @@ const Home = () => {
 
         <div className='partners__logos'>
             <figure className="partners__figure">
-              <img className="partners__image" alt='Bank' 
-                src={monkeyBankLogo} 
-                width={151} 
-                height={151} 
-              />
+              <Link to='/home-loans#partners'>
+                <img className="partners__image" alt='Bank' 
+                  src={monkeyBankLogo} 
+                  width={151} 
+                  height={151} 
+                />
+              </Link>
             </figure>
             <figure className="partners__figure">
-              <img className="partners__image" alt='Bank' 
-                src={bankKnowhere} 
-                width={151} 
-                height={151} 
-              />
+              <Link to='/home-loans#partners'>
+                <img className="partners__image" alt='Bank' 
+                  src={bankKnowhere} 
+                  width={151} 
+                  height={151} 
+                />
+              </Link>
             </figure>
             <figure className="partners__figure">
+            <Link to='/home-loans#partners'>
               <img className="partners__image" alt='Bank' 
                 src={cityBank} 
                 width={151} 
                 height={151} 
               />
+            </Link>
             </figure>
 
         </div>

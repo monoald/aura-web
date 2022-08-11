@@ -1,6 +1,7 @@
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import '@styles/AboutUs.css'
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -53,6 +54,10 @@ const AboutUs = () => {
           <p className="info__data">4</p>
           <h3 className="info__title">Years of experience</h3>
         </div>
+        
+        <Link to='/work-with-us'>
+            <button className="primary-button">Hire us</button>
+          </Link>
       </div>
 
       <section className="regulatory">

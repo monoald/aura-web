@@ -35,3 +35,16 @@ body {
   text-align: center;
   scroll-behavior: smooth;
 }
+
+.primary-button {
+  width: 120px;
+  height: 34px;
+  border: 1px solid var(--font-color);
+  border-radius: 8px;
+  color: var(--font-color);
+  background-color: transparent;
+}
+.primary-button:hover {
+  background-color: var(--font-color);
+  color: var(--background);
+}

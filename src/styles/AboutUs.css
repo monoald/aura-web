@@ -68,6 +68,7 @@
   height: 100vh;
   font-size: var(--font-sm);
   padding: 60px;
+  padding-bottom: 0;
   scroll-snap-align: center;
 }
 
@@ -77,15 +78,18 @@
 
 .regulatory__item {
   width: 100%;
-  height: 80%;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-around;
   align-items: center;
 }
 
 .regulatory__image {
   width: 100%;
+  max-width: 290px;
+  min-width: 290px;
 }
 
 /*---------------RESPONSIVE---------*/
@@ -105,34 +109,35 @@
   }
 
   .text {
-    height: 60vh;
     padding: 30px;
     width: 50%;
-    
   }
 
   .extra {
     width: 50%;
-    height: 60vh;
+    height: auto;
     padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 180px;
+    gap: 40px;
   }
   .extra__title {
     font-size: 5rem;
   }
 
   .regulatory {
-    height: 40%;
+    height: auto;
     scroll-snap-align: none;
+    margin-bottom: 100px;
   }
 
+  .regulatory__title {
+    margin-bottom: 40px;
+  }
   .regulatory__item {
     width: 100%;
-    flex-direction: row;
   }
 
   .regulatory__image {
