@@ -3,7 +3,6 @@
 
 .section {
   height: 100vh;
-  scroll-snap-align: center;
   scroll-margin-top: 12vh;
   position: relative;
 }

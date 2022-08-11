@@ -1,6 +1,5 @@
 .HomeLoans .banner {
   height: 100vh;
-  scroll-snap-align: center;
   scroll-margin-top: 12vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +17,6 @@
 
 .partners-comparison {
   height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +47,6 @@
 
 .loan-contact {
   height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   padding-top: 260px;

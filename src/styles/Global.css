@@ -29,7 +29,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
   background-color: var(--background);
   color: var(--font-color);
   text-align: center;

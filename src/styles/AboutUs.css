@@ -7,7 +7,6 @@
   width: 100%;
   height: 30vh;
   padding: 0 40px;
-  scroll-snap-align: center;
   scroll-margin-top: 12vh;
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +68,6 @@
   font-size: var(--font-sm);
   padding: 60px;
   padding-bottom: 0;
-  scroll-snap-align: center;
 }
 
 .regulatory__title {
@@ -129,7 +127,6 @@
 
   .regulatory {
     height: auto;
-    scroll-snap-align: none;
     margin-bottom: 100px;
   }
 
