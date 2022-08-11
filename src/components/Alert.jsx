@@ -14,7 +14,7 @@ const Alert = ({ alert, handleClose }) => {
         <div className="Alert">
           <div className="message">
             <figure className="message__image">
-              <img src={check} />
+              <img src={check} alt="Check icon"/>
 
               <p className="message__title">Success</p>
             </figure>

@@ -35,19 +35,19 @@
 }
 
 .banner .lux {
-  background-image: url('@images/lux.jpg');
+  background-image: url('@images/lux.webp');
   clip-path: polygon(200% 0, 0 0, 0 100%);
   z-index: 1;
   border-bottom: 1px solid var(--background);
 }
 
 .banner .goldenMountain {
-  background-image: url('@images/goldenMountain.jpg');
+  background-image: url('@images/goldenMountain.webp');
   top: 25%;
   z-index: 0;
 }
 .banner .lion {
-  background-image: url('@images/lion.jpg');
+  background-image: url('@images/lion.webp');
   clip-path: polygon(200% 100%, 0 0, 0 100%);
   top: 50%;
   z-index: 1;

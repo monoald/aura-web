@@ -33,16 +33,16 @@ const Contact = () => {
 
           <figure className="media__container">
             <a className='media__image' href='/' target="_blank">
-              <img src={facebookLogo} />
+              <img src={facebookLogo} alt="Social media account" width={24} height={24}/>
             </a>
             <a className='media__image' href='/' target="_blank">
-              <img src={instagramLogo} />
+              <img src={instagramLogo} alt="Social media account" width={24} height={24}/>
             </a>
             <a className='media__image' href='/' target="_blank">
-              <img src={linkedInLogo} />
+              <img src={linkedInLogo} alt="Social media account" width={24} height={24}/>
             </a>
             <a className='media__image' href='/' target="_blank">
-              <img src={twitterLogo} />
+              <img src={twitterLogo} alt="Social media account" width={24} height={24}/>
             </a>
           </figure>
         </section>

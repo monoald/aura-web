@@ -13,25 +13,41 @@ const Footer = () => {
         
         <figure className="company__social-media">
           <a className='social-media' href='/'>
-            <img src={facebookLogo} />
+            <img src={facebookLogo}
+              alt="social media account"
+              width={24}
+              height={24}
+            />
           </a>
           <a className='social-media' href='/'>
-            <img src={instagramLogo} />
+            <img src={instagramLogo}
+              alt="social media account"
+              width={24}
+              height={24}
+            />
           </a>
           <a className='social-media' href='/'>
-            <img src={linkedInLogo} />
+            <img src={linkedInLogo}
+              alt="social media account"
+              width={24}
+              height={24}
+            />
           </a>
           <a className='social-media' href='/'>
-            <img src={twitterLogo} />
+            <img src={twitterLogo}
+              alt="social media account"
+              width={24}
+              height={24}
+            />
           </a>
         </figure>
       </section>
 
       <nav className='Footer__nav-bar'>
         <ul className='list'>
-          <h2 className='list__name'>
+          <li className='list__name'>
             <Link to='/projects'>Projects</Link>
-          </h2>
+          </li>
 
           <li className='list__item'>
             <Link to='/projects#lux' className='list__text'>Lux</Link>
@@ -47,9 +63,9 @@ const Footer = () => {
         </ul>
 
         <ul className='list'>
-          <h2 className='list__name'>
+          <li className='list__name'>
             <Link to='/home-loans'>Bank Partners</Link>
-          </h2>
+          </li>
 
           <li className='list__item'>
             <Link to='/home-loans#partners' className='list__text'>Monkey Bank</Link>
@@ -65,9 +81,9 @@ const Footer = () => {
         </ul>
 
         <ul className='list'>
-          <h2 className='list__name'>
+          <li className='list__name'>
             Others
-          </h2>
+          </li>
 
           <li className='list__item'>
             <Link to='/about-us' className='list__text'>About us</Link>
@@ -85,7 +101,7 @@ const Footer = () => {
 
       <div className='message'>
         <p>
-          This site is a <strong>case study</strong> built by <a href='/'>Carlos S. Aldazosa</a>. You can see my projects <a href='/'>here</a>.
+          This site is a <strong>case study</strong> built by <a href='/'>Carlos S. Aldazosa</a>. You can see my projects on my <a href='/'>Portfolio</a>.
         </p>
       </div>
     </footer>

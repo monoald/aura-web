@@ -22,13 +22,13 @@
 
 .details__list {
   width: 100%;
-  list-style: none;
   font-size: var(--font-sm);
   display: flex;
   justify-content: space-around;
 }
 
 .details__column {
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 22px;

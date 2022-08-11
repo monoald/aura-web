@@ -8,9 +8,9 @@ import IncompleteForm from "@components/IncompleteForm";
 import useAlert from "@hooks/useAlert";
 import useErrorMessage from "@hooks/useErrorMessage";
 import useSubmit from "@hooks/useSubmit";
-import monkeyBankLogo from "@images/monkeybank.png";
-import bankKnowhere from "@images/bankknowhere.png";
-import cityBank from "@images/citybank.png";
+import monkeyBankLogo from "@images/monkeybank.webp";
+import bankKnowhere from "@images/bankknowhere.webp";
+import cityBank from "@images/citybank.webp";
 import "@styles/HomeLoans.css";
 
 const HomeLoans = () => {

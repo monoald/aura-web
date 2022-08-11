@@ -59,11 +59,11 @@ const AboutUs = () => {
         <h2 className="regulatory__title">Certified By</h2>
 
         <figure className="regulatory__item">
-          <img className="regulatory__image" src="https://www.arello.org/images/arello-logo-2021.png" />
+          <img className="regulatory__image" alt="Regulatory Entity" src="https://www.arello.org/images/arello-logo-2021.png" width={225} height={82} />
 
-          <img className="regulatory__image" src="https://www.nar.realtor/sites/all/themes/gesso/images/nar-logo-2020.svg" />
+          <img className="regulatory__image" alt="Regulatory Entity" src="https://www.nar.realtor/sites/all/themes/gesso/images/nar-logo-2020.svg" width={225} height={82} />
 
-          <img className="regulatory__image" src="https://www.rera.gov.bh/en/images/logo-RERA.png" />
+          <img className="regulatory__image" alt="Regulatory Entity" src="https://www.rera.gov.bh/en/images/logo-RERA.png" width={225} height={82} />
         </figure>
       </section>
 

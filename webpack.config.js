@@ -34,7 +34,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg)$/,
+        test: /\.(png|svg|webp)$/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name].[ext]'

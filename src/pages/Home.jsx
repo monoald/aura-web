@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import building from '@images/buildings.jpg';
-import luxPlan from '@images/luxPlan.png';
-import goldenMountainPlan from '@images/goldenMountainPlan.png';
-import lionPlan from '@images/lionPlan.png';
-import monkeyBankLogo from '@images/monkeybank.png';
-import bankKnowhere from '@images/bankknowhere.png';
-import cityBank from '@images/citybank.png';
+import building from '@images/buildings.webp';
+import luxPlan from '@images/luxPlan.webp';
+import goldenMountainPlan from '@images/goldenMountainPlan.webp';
+import lionPlan from '@images/lionPlan.webp';
+import monkeyBankLogo from '@images/monkeybank.webp';
+import bankKnowhere from '@images/bankknowhere.webp';
+import cityBank from '@images/citybank.webp';
 import "@styles/Home.css";
 
 const Home = () => {
@@ -20,6 +20,8 @@ const Home = () => {
           <img
             className="banner__image"
             src={building}
+            alt="New Building"
+            loading='lazy'
           />
         </figure>
 
@@ -34,19 +36,19 @@ const Home = () => {
       <section className="plans container">
         <div className='carousel'>
           <figure className='carousel__item'>
-            <img className='carousel__image' src={luxPlan} />
+            <img className='carousel__image' src={luxPlan} alt="Building Plan" loading='lazy'/>
           </figure>
 
           <figure className='carousel__item'>
-            <img className='carousel__image' src={goldenMountainPlan} />
+            <img className='carousel__image' src={goldenMountainPlan} alt="Building Plan" loading='lazy'/>
           </figure>
 
           <figure className='carousel__item'>
-            <img className='carousel__image' src={lionPlan} />
+            <img className='carousel__image' src={lionPlan} alt="Building Plan" loading='lazy'/>
           </figure>
 
           <figure className='carousel__item'>
-            <img className='carousel__image' src={luxPlan} />
+            <img className='carousel__image' src={luxPlan} alt="Building Plan" loading='lazy'/>
           </figure>
         </div>
 
@@ -65,17 +67,28 @@ const Home = () => {
         </div>
 
         <div className='partners__logos'>
-          <figure className='partners__figure'>
-            <img className='partners__image' src={monkeyBankLogo} />
-          </figure>
+            <figure className="partners__figure">
+              <img className="partners__image" alt='Bank' 
+                src={monkeyBankLogo} 
+                width={151} 
+                height={151} 
+              />
+            </figure>
+            <figure className="partners__figure">
+              <img className="partners__image" alt='Bank' 
+                src={bankKnowhere} 
+                width={151} 
+                height={151} 
+              />
+            </figure>
+            <figure className="partners__figure">
+              <img className="partners__image" alt='Bank' 
+                src={cityBank} 
+                width={151} 
+                height={151} 
+              />
+            </figure>
 
-          <figure className='partners__figure'>
-            <img className='partners__image' src={bankKnowhere} />
-          </figure>
-
-          <figure className='partners__figure'>
-            <img className='partners__image' src={cityBank} />
-          </figure>
         </div>
       </section>
 

@@ -10,8 +10,8 @@ const ProjectSection = ({ project }) => {
           {project.name}
         </h3>
 
-        <ul className='details__list'>
-          <div className='details__column'>
+        <div className='details__list'>
+          <ul className='details__column'>
             <li>
               <span className='details__data'>
               { project.data.bedrooms } Bedrooms
@@ -23,9 +23,9 @@ const ProjectSection = ({ project }) => {
               { project.data.bathrooms } Bathrooms
               </span>
             </li>
-          </div>
+          </ul>
 
-          <div className='details__column'>
+          <ul className='details__column'>
             <li>
               <span className='details__data'>
                 { project.data.mts } mts<sup>2</sup>
@@ -37,19 +37,19 @@ const ProjectSection = ({ project }) => {
               { project.data.price } $
               </span>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
 
       <figure className={`ProjectSection__image ${project.id}__image`}>
-        <img src={project.images.insideImage} />
+        <img src={project.images.insideImage} alt="Apartment Sight" loading='lazy' width={380} height={254}/>
         <Link to='/contact' className='button-container'>
           <button className='button'>Request Tour</button>
         </Link>
       </figure>
 
       <figure className={`ProjectSection__plans ${project.id}__plans`}>
-        <img src={project.images.plansImage} />
+        <img src={project.images.plansImage} alt="Apartment Plans" loading='lazy' width={251} height={180} />
       </figure>
       
     </section>

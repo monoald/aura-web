@@ -5,7 +5,7 @@ const PartnerDetails = ({ partner, handleBankSelected }) => {
   return (
     <div className='partner'>
       <figure className='partner__image partner__item'>
-        <img src={partner.logo} className='partner__logo'/>
+        <img src={partner.logo} className='partner__logo' alt='Partner Logo' width={60} height={60} loading="lazy"/>
       </figure>
 
       <p className='partner__interest partner__item'>{`${partner.interest[0]} - ${partner.interest[1]}%`}</p>

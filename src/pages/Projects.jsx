@@ -2,12 +2,12 @@ import Header from '@components/Header';
 import '@styles/Projects.css'
 import ProjectSection from '@components/ProjectSection';
 import Footer from '@components/Footer';
-import luxImage from '@images/luxInside.jpg';
-import luxPlans from '@images/luxPlan.png';
-import goldenMountainImage from '@images/goldenMountainInside.jpg';
-import goldenMountainPlans from '@images/goldenMountainPlan.png';
-import lionImage from '@images/lionInside.jpg';
-import lionPlans from '@images/lionPlan.png';
+import luxImage from '@images/luxInside.webp';
+import luxPlans from '@images/luxPlan.webp';
+import goldenMountainImage from '@images/goldenMountainInside.webp';
+import goldenMountainPlans from '@images/goldenMountainPlan.webp';
+import lionImage from '@images/lionInside.webp';
+import lionPlans from '@images/lionPlan.webp';
 
 const Projects = () => {
   const projects = [

@@ -106,15 +106,15 @@
 
 .carousel__item:nth-child(1),
 .carousel__item:nth-child(4) {
-  background-image: url('@images/lux.jpg');
+  background-image: url('@images/lux.webp');
 }
 
 .carousel__item:nth-child(2) {
-  background-image: url('@images/goldenMountain.jpg');
+  background-image: url('@images/goldenMountain.webp');
 }
 
 .carousel__item:nth-child(3) {
-  background-image: url('@images/lion.jpg');
+  background-image: url('@images/lion.webp');
 }
 
 .carousel__image {
@@ -150,6 +150,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  column-gap: 20px;
 }
 
 .partners__figure {
@@ -173,7 +175,7 @@
   justify-content: center;
   align-items: center;
   gap: 144px;
-  background-image: url('@images/apartmentinside.jpg');
+  background-image: url('@images/apartmentinside.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
