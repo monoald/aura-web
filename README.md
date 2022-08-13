@@ -13,18 +13,20 @@
 		<img src="https://img.shields.io/badge/npm-8.6.0-d32d1d?style=flat" />
 	</a>
 </p>
-<p>
-<img src="https://github.com/monoald/real-estate-web/blob/main/.github/images/banner.png?raw=true" />
 
-Website of a Real Estate Business, built with Rect JS, minfied with Webpack and transpilled with Babel.  The router was applied using the [react-router-dom](https://reactrouter.com/) library and it contains the following routes: Home, Projects, Home Loans, About us, Work with us, Contact. You can here see the <a href="">project deployed</a>.
-<p/>
+<p float="left" align="center">
+  <img src=".github/images/preview-desktop.png" width="70%" />
+  <img src=".github/images/preview-mobile.png" width="29%"/>
+</p>
+
+Website of a Real Estate Business, built with Rect JS, minfied with Webpack and transpilled with Babel.  The router was applied using the [react-router-dom](https://reactrouter.com/) library and it contains the following routes: Home, Projects, Home Loans, About us, Work with us, Contact. You can here see the [project deployed](https://real-estate-monoald.netlify.app/home-loans).
 
 ## Environment Configuration
 Simple npm v8.6.0 environment, this project is minify with **Webpack** and transpiled with **Babel** for a great browser compatibility. 
 ### Installation
 Clone repository:
 
-    sudo apt install nodejs npm
+    git@github.com:monoald/real-estate-web.git
 
 Install dependencies:
 
@@ -53,6 +55,10 @@ Production code will be sent to `deploy` new branch, you can change the name of 
 
     "deploy":  "msg=`git show-branch --no-name HEAD` && gh-pages -b <BRANCH_NAME> -d dist -m \"$msg\"  "
 
+Also I deploy this project on netlify while I fix the problem with the SPA routes.
+
+## Design
+The desing was created by me, but using no design tool
 ## License
 
 > This project is licensed under the MIT License
