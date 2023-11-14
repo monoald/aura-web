@@ -1,14 +1,14 @@
 {
   "name": "real-estate-web",
-  "version": "1.0.0",
-  "description": "real estate web built with react.js",
+  "version": "2.0.0",
+  "description": "real estate web built with astro js",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
-    "deploy": "msg=`git show-branch --no-name HEAD` && gh-pages -b deploy -d dist -m \"$msg\" ",
-    "start": "webpack serve",
-    "build": "webpack --mode production"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
@@ -25,24 +25,10 @@
   },
   "homepage": "https://github.com/monoald/real-estate-web#readme",
   "dependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.18.0",
-    "@babel/preset-env": "^7.18.0",
-    "@babel/preset-react": "^7.17.12",
-    "@heroicons/react": "^1.0.6",
-    "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.1",
-    "gh-pages": "^4.0.0",
-    "html-loader": "^3.1.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
+    "@astrojs/mdx": "^1.1.4",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^3.5.3",
+    "react": "^18.2.0"
   }
 }

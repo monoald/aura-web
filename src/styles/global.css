@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background: #06070c;
+	--background-transparent: #06070caa;
+  --font-color: rgba(245, 245, 247, 0.7);
+  --font-color-hover: rgba(245, 245, 247, 1);
+  --gradient-vertical: linear-gradient(rgba(6,7,12,0), rgba(6,7,12,0.6), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1));
+  --gradient-horizontal: linear-gradient(to left,rgba(6,7,12,0), rgba(6,7,12,0.5), rgba(6,7,12,0.7), rgba(6,7,12,0.9), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1), rgba(6,7,12,1));
+  --font-eln: 2.6rem;
+  --font-ln: 2.2rem;
+  --font-md: 1.8rem;
+  --font-sm: 1.4rem;
+}
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+body {
+	font-family: 'Atkinson', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background: var(--background);
+	background-size: 100% 600px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: rgb(var(--gray-dark));
+	font-size: 20px;
+	line-height: 1.7;
+}
+main {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 3em 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: rgb(var(--black));
+	line-height: 1.2;
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	clip: rect(1px 1px 1px 1px);
+	/* maybe deprecated but we need to support legacy browsers */
+	clip: rect(1px, 1px, 1px, 1px);
+	/* modern browsers, clip-path works inwards from each corner */
+	clip-path: inset(50%);
+	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+	white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--font-color);
+  border-radius: 10px;
+  border: 3px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--font-color-hover);
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
