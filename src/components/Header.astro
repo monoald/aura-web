@@ -1,23 +1,25 @@
 ---
 import HeaderLink from './HeaderLink.astro'
-import { SITE_TITLE } from '../consts'
 ---
 
 <header>
-	<h2><a class='logo' href="/">My Real Estate</a></h2>
+	<h2>
+		<span class='icon-logo'/>
+		<a class='logo' href='/'>AURA</a>
+	</h2>
 
-	<button id='menu-button' type='button' class="menu">
-		<span class="icon-menu" aria-hidden="true"/>
+	<button id='menu-button' type='button' class='menu'>
+		<span class='icon-menu' aria-hidden='true'/>
 	</button>
 
 	<nav id='menu'>
 		<button id='close-menu' class='close-menu'></button>
 		<ul>
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/project">Projects</HeaderLink>
-			<HeaderLink href="/loans">Loans</HeaderLink>
-			<HeaderLink href="/about-us">About us</HeaderLink>
-			<HeaderLink href="/contact">Contact</HeaderLink>
+			<HeaderLink href='/'>Home</HeaderLink>
+			<HeaderLink href='/project'>Projects</HeaderLink>
+			<HeaderLink href='/loans'>Loans</HeaderLink>
+			<HeaderLink href='/about-us'>About us</HeaderLink>
+			<HeaderLink href='/contact'>Contact</HeaderLink>
 		</ul>
 	</nav>
 </header>
@@ -34,9 +36,24 @@ import { SITE_TITLE } from '../consts'
 		justify-items: center;
 		align-items: center;
 	}
+	header h2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8em;
+	}
+	.icon-logo {
+		width: 35px;
+		height: 30px;
+		display: block;
+		background-image: url('../assets/icons/logo.png');
+		background-size: cover;
+		background-position: center;
+	}
 	.logo {
 		font-size: var(--font-sm);
-		color: var(--font-color-hover);
+		color: var(--font-color);
+		font-weight: 500;
 		text-decoration: none;
 	}
 	header nav {
@@ -93,24 +110,20 @@ import { SITE_TITLE } from '../consts'
 		}
 		.logo {
 			text-align: start;
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 		}
-
 		.menu {
 			display: none;
 		}
-
 		.close-menu {
 			display: none;
 		}
-
 		header nav {
 			display: flex;
 			width: fit-content;
 			max-width: 560px;
 			z-index: 2;
 		}
-
 		header nav ul {
 			flex-direction: row;
 			justify-content: space-between;
@@ -123,9 +136,9 @@ import { SITE_TITLE } from '../consts'
 <script is:inline>
 	const handleToggleClick = () => {
     const element = document.getElementById('menu')
-    element.classList.toggle("active")
+    element.classList.toggle('active')
   }
 
-	document.getElementById("menu-button").addEventListener("click", handleToggleClick)
-	document.getElementById("close-menu").addEventListener("click", handleToggleClick)
+	document.getElementById('menu-button').addEventListener('click', handleToggleClick)
+	document.getElementById('close-menu').addEventListener('click', handleToggleClick)
 </script>

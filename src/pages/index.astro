@@ -1,50 +1,322 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+
+import build1 from '../assets/images/edif1.webp'
+import build2 from '../assets/images/edif2.webp'
+import build3 from '../assets/images/edif3.webp'
+import bank1 from '../assets/icons/BCP-logo.svg'
+import bank2 from '../assets/icons/investec-logo.svg'
+import bank3 from '../assets/icons/BOA-logo.svg'
+import bank4 from '../assets/icons/usbank-logo.svg'
+import bank5 from '../assets/icons/capitalone-logo.svg'
+import { Image } from 'astro:assets'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like
-				Tailwind, React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class='banner'>
+				<div class='banner__image'></div>
+				<div class='banner__text'>
+					<h2>Find Your Perfect Home.</h2>
+					<p>Discover your dream home with Aura</p>
+					<a href='/about-us'>
+						<button class='primary-button'>Who we are?</button>
+					</a>
+				</div>
+			</section>
+			<section class='plans'>
+        <ul class='caroussel-track'>
+					<li>
+							<Image src={build1} alt='Building Plan' loading='lazy'/>
+					</li>
+					<li>
+						<Image src={build2} alt='Building Plan' loading='lazy'/>
+					</li>
+					<li>
+						<Image src={build3} alt='Building Plan' loading='lazy'/>
+					</li>
+					<li>
+						<Image src={build1} alt='Building Plan' loading='lazy'/>
+					</li>
+        </ul>
+
+        <div class='plans__text'>
+          <h2>Match your style.</h2>
+          <p>Look in multiple zones and cities</p>
+        </div>
+      </section>
+			<section class='partners'>
+        <div class='partners__text'>
+          <h2>Looking for a mortgage?</h2>
+          <p>You can get it with one of our partners.</p>
+        </div>
+
+				<div class='caroussel'>
+					<ul class='caroussel-track'>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank2}
+								alt='logo of Investec bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank3}
+								alt='logo of Bank of America bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank4}
+								alt='logo of Us Capital bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank5}
+								alt='logo of Capital One bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank1}
+								alt='logo of Banco de Credito Peruano bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank2}
+								alt='logo of Investec bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank3}
+								alt='logo of Bank of America bank'
+								height={50}
+							/>
+						</li>
+						<li class="partner">
+							<Image class="partner__image" alt='Bank' 
+								src={bank4}
+								alt='logo of Us Capital bank'
+								height={50}
+							/>
+						</li>
+					</ul>
+				</div>
+      </section>
+			<section class='cta'>
+				<h2>Search the apartment of your dreams</h2>
+
+        <a class='secondary-button' href='/projects'>Find it now</a>
+      </section>
 		</main>
-		<Footer />
+
+		<Footer/>
 	</body>
 </html>
+<style>
+	main {
+		color: var(--font-color);
+	}
+	.banner {
+		position: relative;
+		width: 100%;
+		height: calc(100vh - 2.4em);
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 
+		'image'
+		'text';
+	}
+	.banner::before {
+		content: '';
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		background: linear-gradient(0deg, var(--background) 50%, rgba(0,0,0,0.2) 80%);
+	}
+	.banner__image {
+		width: 100%;
+		grid-area: image;
+		background-image: url('../assets/images/edif.jpg');
+		background-position: 20% 20%;
+		background-repeat: no-repeat;
+		background-size: auto 150%;
+	}
+	.banner__text,
+	.plans__text {
+		grid-area: text;
+		padding-inline: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.3em;
+		text-align: center;
+		text-wrap: balance;
+		z-index: 1;
+	}
+	.banner__text p {
+		font-size: 1.2rem;
+	}
+	.banner__text button {
+		margin-top: 2em;
+	}
+	.plans {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 
+		'text'
+		'image';
+		overflow: hidden;
+	}
+	.plans::before {
+		content: '';
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		background: linear-gradient(180deg, var(--background) 50%, rgba(0,0,0,0.2) 80%);
+		z-index: 1;
+	}
+	.plans__text {
+		grid-column: 2 / 4;
+		grid-row: 1 / 2;
+	}
+	.plans .caroussel-track {
+		width: fit-content;
+		height: 100%;
+		display: flex;
+		list-style: none;
+		animation: scroll 15s linear infinite;
+	}
+	.caroussel-track li {
+		width: auto;
+		height: 100%;
+	}
+	.plans .caroussel-track img {
+		object-fit: cover;
+		height: 100%;
+	}
+	.partners {
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		justify-content: center;
+		gap: 6em;
+		text-align: center;
+	}
+	.partners__text {
+		display: flex;
+		flex-direction: column;
+		align-self: flex-end;
+		align-items: center;
+		justify-content: center;
+		gap: 0.3em;
+	}
+	.partners .caroussel {
+		position: relative;
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.partners .caroussel::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 200px;
+		height: 100%;
+		background: linear-gradient(90deg, var(--background), rgba(0,0,0,0));
+		z-index: 1;
+	}
+	.partners .caroussel::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 200px;
+		height: 100%;
+		background: linear-gradient(270deg, var(--background), rgba(0,0,0,0));
+		z-index: 1;
+	}
+	.partners .caroussel-track {
+		display: flex;
+		gap: 5em;
+		list-style: none;
+		animation: infinite-caroussel 15s linear infinite;
+	}
+	.partner {
+		width: auto;
+		height: 100px;
+	}
+	.cta {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5em;
+		background-image: url('../assets/images/apartmentinside.webp');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:cover;
+	}
+	.cta h2 {
+		font-size: var(--font-ln);
+		color: var(--background);
+	}
+	@keyframes scroll {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(calc(-75%))}
+	}
+	@keyframes infinite-caroussel {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(calc(-168%))}
+	}
+	@media (min-width: 768px) {
+		.banner {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: 
+			'text image';
+		}
+		.banner__image {
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+		}
+		.banner::before {
+			background: linear-gradient(90deg, var(--background) 50%, rgba(0,0,0,0.2) 80%);
+		}
+		.plans {
+			grid-template-columns: 45% 20% 35%;
+			grid-template-rows: 100%;
+		}
+		.plans::before {
+			background: linear-gradient(270deg, var(--background) 50%, rgba(0,0,0,0.2) 80%);
+		}
+	}
+</style>
