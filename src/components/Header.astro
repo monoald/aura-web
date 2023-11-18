@@ -16,7 +16,7 @@ import HeaderLink from './HeaderLink.astro'
 		<button id='close-menu' class='close-menu'></button>
 		<ul>
 			<HeaderLink href='/'>Home</HeaderLink>
-			<HeaderLink href='/project'>Projects</HeaderLink>
+			<HeaderLink href='/apartments'>Apartments</HeaderLink>
 			<HeaderLink href='/loans'>Loans</HeaderLink>
 			<HeaderLink href='/about-us'>About us</HeaderLink>
 			<HeaderLink href='/contact'>Contact</HeaderLink>
@@ -35,6 +35,8 @@ import HeaderLink from './HeaderLink.astro'
 		grid-template-rows: 1fr;
 		justify-items: center;
 		align-items: center;
+		background: var(--background);
+		z-index: 2;
 	}
 	header h2 {
 		display: flex;

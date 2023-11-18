@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Common.astro';
+import palaceInside from '../assets/images/apartmentInside3.webp'
+import luxInside from '../assets/images/apartmentInside1.webp'
+import altarInside from '../assets/images/apartmentInside2.webp'
+import { Image } from 'astro:assets';
+
+const projects = [
+    {
+      name: 'Palace',
+      id: 'palace',
+      image: palaceInside,
+      data: {
+        bedrooms: 2,
+        bathrooms: 2,
+        mts: 80,
+        kitchen: 10,
+        garage: 1,
+        price: '100,000.00',
+      }
+    },
+    {
+      name: 'Golden Mountain',
+      id: 'goldenMountain',
+      image: luxInside,
+      data: {
+        bedrooms: 2,
+        bathrooms: 3,
+        mts: 130,
+        kitchen: 20,
+        garage: 2,
+        price: '220,000.00',
+      }
+    },
+    {
+      name: 'Lion',
+      id: 'lion',
+      image: altarInside,
+      data: {
+        bedrooms: 2,
+        bathrooms: 1,
+        mts: 100,
+        kitchen: 12,
+        garage: 1,
+        price: '130,000.00',
+      }
+    }
+  ]
+---
+<Layout
+title="Projects"
+
+	description="Vritual Showroom of the aura buildings and its apartments"
+	pubDate={new Date('November 17 2023')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+  <section class='banner section'>
+
+    <span class='banner__border'></span>
+    <span class='banner__border'></span>
+    
+    <a href='#palace' class='banner__item palace'>
+      <h2 class='banner__text'>Palace</h2>
+    </a>
+
+    <a href='#lux' class='banner__item lux'>
+      <h2 class='banner__text'>Lux</h2>
+    </a>
+
+    <a href='#altar' class='banner__item altar'>
+      <h2 class='banner__text'>Altar</h2>
+    </a>
+  </section>
+
+  {
+    projects.map(project => (
+      <section id={project.id} class='apartment'>
+        <figure class='apartment__img-container'>
+          <Image src={project.image} alt="" height={450}/>
+        </figure>
+        <div class="apartment__info">
+          <div class="info__column1">
+            <p>
+              <span class="icon-bedroom"/> {project.data.bedrooms} Bedroom(s)
+            </p>
+            <p>
+              <span class="icon-bathroom"/> {project.data.bathrooms} Bathroom(s)
+            </p>
+          </div>
+          <div class="info__column2">
+            <p>
+              <span class="icon-size"/> {project.data.mts} mts <sup>2</sup>
+            </p>
+            <p>
+              <span class="icon-kitchen"/> {project.data.kitchen} mts <sup>2</sup>
+            </p>
+          </div>
+          <div class="info__solo">
+            <p>
+              <span class="icon-garage"/> Include {project.data.garage} parking space
+            </p>
+            <p class="apartment__price">$ {project.data.price}</p>
+          </div>
+
+        </div>
+      </section>
+    ))
+  }
+  <section></section>
+</Layout>
+
+<style>
+  .banner {
+    position: relative;
+    display: flex;
+    align-content: center;
+    height: 100vh;
+  }
+  .banner__item {
+    height: 50%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: var(--background);
+    text-decoration: none;
+  }
+  .banner__text {
+    padding: 0.3em 1em;
+    border-radius: 0.5em;
+    background: rgba(200,200,200,0.2);
+    backdrop-filter: blur(5px);
+    font-size: 2.2rem;
+    font-weight: bolder;
+    overflow: hidden;
+  }
+  .banner .palace {
+    background-image: url('../assets/images/palace.webp');
+    clip-path: polygon(200% 0, 0 0, 0 100%);
+    z-index: 1;
+    border-bottom: 1px solid var(--background);
+  }
+  .banner .lux {
+    background-image: url('../assets/images/lux.webp');
+    top: 25%;
+    z-index: 0;
+  }
+  .banner .altar {
+    background-image: url('../assets/images/altar.webp');
+    clip-path: polygon(200% 100%, 0 0, 0 100%);
+    top: 50%;
+    z-index: 1;
+  }
+  .banner__border {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    background-color: var(--background);
+    z-index: 2;
+  }
+  .banner__border:nth-child(1) {
+    top: 25%;
+    clip-path: polygon(0 97%, 100% 0, 100% 3%, 0 100%);
+  }
+  .banner__border:nth-child(2) {
+    top: 50%;
+    clip-path: polygon(0 0, 100% 97%, 100% 100%, 0 3%);
+  }
+  .apartment {
+    height: 100vh;
+    padding-inline: 3em;
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    color: var(--font-color);
+  }
+  .apartment__img-container {
+    width: 50%;
+    min-width: 50%;
+    height: 400px;
+    border-radius: 1em;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .apartment__info {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    'column1 column2'
+    'rest rest';
+    gap: 1.5em;
+    font-size: 1.1rem;
+  }
+  .info__column1,
+  .info__column2 {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    gap: 2em;
+  }
+  .info__column1 {
+    grid-area: column1;
+  }
+  .info__column2 {
+    grid-area: column2;
+  }
+  .info__solo {
+    grid-area: rest;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .apartment__price {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .apartment__info p {
+    height: fit-content;
+    display: flex;
+    gap: 0.5em;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-bedroom {
+    background-image: url('../assets//icons/bedroom.svg');
+  }
+  .icon-bathroom {
+    background-image: url('../assets//icons/bathroom.svg');
+  }
+  .icon-kitchen {
+    background-image: url('../assets//icons/kitchen.svg');
+  }
+  .icon-garage {
+    background-image: url('../assets//icons/garage.svg');
+  }
+  .icon-size {
+    background-image: url('../assets//icons/size.svg');
+  }
+  @media (min-width: 768px) {
+    .banner {
+      width: 100%;
+    }
+
+    .banner__item {
+      width: 50%;
+      height: 100%;
+      background-size: 100% auto;
+      transition: background-size 1s;
+    }
+
+    .banner__item:hover {
+      background-size: 120%;
+    }
+    .banner .palace {
+      clip-path: polygon(0 0, 50% 0, 100% 100%,0 100%);
+    }
+    .banner .lux {
+      top: 0;
+      left: 25%;
+    }
+    .banner .altar {
+      top: 0;
+      left: 50%;
+      clip-path: polygon(0 100%, 50% 0, 100% 0%,100% 100%);
+    }
+    .banner__border {
+      width: 25%;
+      height: 100%;
+    }
+    .banner__border:nth-child(1) {
+      top: 0;
+      left: 25.1%;
+      clip-path: polygon(97% 100%, 0% 00%, 3% 0%, 100% 100%);
+    }
+    .banner__border:nth-child(2) {
+      top: 0;
+      left: 50%;
+      clip-path: polygon(3% 100%, 0% 100%, 100% -3%, 100% 00%);
+    }
+  }
+</style>
