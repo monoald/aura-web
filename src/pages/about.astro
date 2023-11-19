@@ -1,62 +1,199 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import Layout from '../layouts/Common.astro';
+
+import regular1 from '../assets/images/regular1.png'
+import regular2 from '../assets/images/regular2.png'
+import regular3 from '../assets/images/regular3.svg'
+import { Image } from 'astro:assets';
 ---
+<Layout>
+	<section class="info">
+		<ul>
+			<li>
+				<p id='buildings' class="info__number"></p>
+				<p>Buildings</p>
+			</li>
+			<li>
+				<p id='apartments' class="info__number"></p>
+				<p>Apartments</p>
+			</li>
+			<li>
+				<p id='cities' class="info__number"></p>
+				<p>Cities</p>
+			</li>
+		</ul>
+	</section>
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+	<section class="company">
+		<div class="cta">
+			<div class="logo">
+				<span/> 
+				<h2>AURA</h2>
+			</div>
+			<p class="years">16</p>
+			<p>Years of experience</p>
+			
+			<a href='/work-with-us'>
+				<button class="primary-button">Hire us</button>
+			</a>
+		</div>
+		<div class="history">
+			<h2>About AURA</h2>
+			<p>
+				Founded 16 years ago by a visionary individual with a passion for real estate, our successful company has a rich history rooted in personal connections and a commitment to excellence. What began as a humble venture, with the founder initially selling homes for relatives and friends, has blossomed into a thriving real estate enterprise.
+			</p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<p>
+				In the early days, the company operated on the principles of trust, integrity, and personalized service. As the founder diligently helped acquaintances navigate the real estate market, word-of-mouth referrals and satisfied clients became the cornerstone of our growth. The commitment to understanding clients' needs, coupled with a genuine interest in their success, quickly set the company apart in the competitive industry.
+			</p>
+			<p>
+				Today, with a stellar reputation built on a foundation of strong relationships and successful transactions, our real estate company stands as a testament to the enduring power of personalized service and a commitment to the highest standards in the industry. Looking ahead, we remain dedicated to shaping the future of real estate while cherishing the values that fueled our remarkable journey over the past 16 years.
+			</p>
+		</div>
+	</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+	<section class="regular">
+		<h2>Certified By</h2>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
-
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+		<ul>
+			<li>
+				<Image alt="Regulatory Entity" src={regular1} height={80} />
+			</li>
+			<li>
+				<Image alt="Regulatory Entity" src={regular2} height={80} />
+			</li>
+			<li>
+				<Image alt="Regulatory Entity" src={regular3} height={80} />
+			</li>
+		</ul>
+	</section>
 </Layout>
+<style>
+	.info {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.info ul {
+		width: 80%;
+		height: 70%;
+		border-radius: 1em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: var(--font-color);
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: center;
+		list-style: none;
+	}
+	.info::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../assets/images/city.webp');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		content: "";
+		filter: saturate(50%);
+		z-index: -1;
+	}
+	.info__number {
+		font-size: 4rem;
+	}
+	#apartments::before {
+		content: '+';
+
+	}
+	.company {
+		color: var(--font-color);
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'text cta';
+		place-items: center;
+	}
+	.company .cta {
+		height: fit-content;
+		grid-area: cta;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+	}
+	.cta .logo { 
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.cta .logo span {
+		height: 80px;
+		display: block;
+		background-image: url('../assets/icons/logo.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.cta .years {
+		padding-top: 0.5em;
+		font-size: 3rem;
+	}
+	.cta p {
+		font-size: 2rem;
+		text-wrap: balance;
+	}
+	.cta .primary-button {
+		margin-top: 2em;
+		padding: 0.7em 2em;
+	}
+	.history {
+		padding-inline-start: 3em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		font-size: 1.15rem;
+	}
+	.regular {
+		margin-block: 8em;
+	}
+	.regular h2 {
+		color: var(--font-color);
+		text-align: center;
+		margin-bottom: 2em;
+	}
+	.regular ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5em;
+	}
+</style>
+<script>
+	function animateValue(obj: HTMLElement, start: number, end: number, duration: number) {
+		let startTimestamp: number | null = null
+		const step = (timestamp: number) => {
+			if (!startTimestamp) startTimestamp = timestamp
+			const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+			obj.innerHTML = `${Math.floor(progress * (end - start) + start)}`
+			if (progress < 1) {
+				window.requestAnimationFrame(step)
+			}
+		}
+		window.requestAnimationFrame(step)
+	}
+
+	const buildings = document.getElementById("buildings") as HTMLElement
+	const apartments = document.getElementById("apartments") as HTMLElement
+	const cities = document.getElementById("cities") as HTMLElement
+	animateValue(buildings, 0, 22, 1000)
+	animateValue(apartments, 0, 500, 1000)
+	animateValue(cities, 0, 14, 1000)
+</script>

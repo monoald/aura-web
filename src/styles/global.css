@@ -3,7 +3,9 @@
   padding: 0;
   margin: 0;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 :root {
   --background: #06070c;
 	--background-transparent: #06070caa;
