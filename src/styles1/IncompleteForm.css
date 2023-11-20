@@ -1,9 +1,0 @@
-.IncompleteForm {
-  width: 100%;
-  padding: 40px;
-}
-
-.IncompleteForm__text {
-  color: red;
-  font-size: var(--font-sm);
-}
