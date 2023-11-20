@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Common.astro'
+---
+<Layout
+title="Projects"
+
+	description="Vritual Showroom of the aura buildings and its apartments"
+	pubDate={new Date('November 17 2023')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+  <section class='contact'>
+    <form id='contact'>
+      <h2>Contact Us</h2>
+      <label for='email'>
+        Email
+        <input type="email" name="email" required>
+      </label>
+      <label for='title'>
+        Title
+        <input type="text" name="title" required>
+      </label>
+      <label for='message'>
+        Message
+        <textarea name="message" cols="30" rows="10" required></textarea>
+      </label>
+
+      <button type="submit" class="primary-button">Submit</button>
+    </form>
+
+    <article id="toggle-tip" class="toggle-tip">
+      The message has been sent successfully.
+    </article>
+  </section>
+</Layout>
+
+<style>
+  .contact {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 2.4em);
+    display: grid;
+    place-items: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--font-color);
+  }
+  form h2 {
+    text-align: center;
+  }
+  form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1rem;
+  }
+  input, textarea {
+    border: 1px solid var(--font-color);
+    border-radius: 0.6em;
+    padding: 0.5em 0.8em;
+    background: transparent;
+    color: var(--font-color);
+    font-size: 0.9rem;
+  }
+  form button {
+    width: 7em;
+    margin: 0 auto;
+  }
+  .toggle-tip {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1.2em 2.4em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.7em;
+    background: var(--font-color-hover);
+    font-size: 1rem;
+    color: var(--background);
+  }
+  .toggle-tip--active {
+    display: block;
+  }
+</style>
+
+<script>
+  function displayToggleTip(e: SubmitEvent) {
+    e.preventDefault()
+    toggleTip.classList.toggle('toggle-tip--active')
+    setTimeout(() => {
+      toggleTip.classList.toggle('toggle-tip--active')
+    }, 3500);
+  }
+  const form = document.getElementById('contact') as HTMLElement
+  const toggleTip = document.getElementById('toggle-tip') as HTMLElement
+  form.addEventListener('submit', displayToggleTip)
+</script>
