@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://monoald.github.io/',
+	base: '/aura-web',
 	integrations: [mdx(), sitemap()],
 });
